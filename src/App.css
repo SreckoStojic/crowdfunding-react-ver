@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0%;
+  background-color: #F2F2F2;
+  font-weight: 600;
+}
+
+p {
+  font-family: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #7A7A7A;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.css-main {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.css-btn {
+  border-radius: 25px;
+  width: 204px;
+  height: 50px;
+  border: none;
+  background-color: #3CB3AB;
+  color: white;
+}

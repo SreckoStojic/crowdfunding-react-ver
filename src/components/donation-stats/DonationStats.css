@@ -1,0 +1,42 @@
+.css-stats {
+    border-radius: 10px;
+    background-color: white;
+    width: 730px;
+    height: 212px;
+}
+
+.css-stats-table {
+    width: 634px;
+    padding: 50px;
+    padding-bottom: 30px;
+}
+
+.css-stats-table tr th {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39.14px;
+    text-align: left;
+}
+
+.css-stats-table tr th input {
+    background-color: white;
+    border: none;
+    border-right: 1px solid gray;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39.14px;
+    width: 150px;
+    color: black;
+}
+
+.css-stats-table tr td {
+    font-family: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #7A7A7A;
+}
+
+.css-progress-bar {
+    width: 634px;
+    margin-left: 50px;
+}

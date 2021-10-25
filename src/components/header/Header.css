@@ -1,0 +1,26 @@
+header {
+    width: 1440px;
+    height: 400px;
+    background-image: url(/src/images/image-hero-desktop.jpg);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+nav ul {
+    list-style: none;
+    text-align: right;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: white;
+}
