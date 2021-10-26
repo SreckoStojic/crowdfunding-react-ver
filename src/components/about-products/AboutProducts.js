@@ -5,7 +5,9 @@ const mystyle = {
     backgroundColor: "gray"
 };
 
-function AboutProducts() {
+
+
+function AboutProducts(props) {
     return (
         <div className="css-about-products js-about-products">
             <h3>About this project</h3>
@@ -18,48 +20,7 @@ function AboutProducts() {
                 Featuring artisan craftsmanship, the simplicity of design creates extra desk space below<br/>
                 your computer to allow notepads, pens, and USB sticks to be stored under the stand.
             </p>
-            <div className="css-product">
-                <div className="css-product-header">
-                    <h3>Bamboo Stand</h3>
-                    <p>Pledge $25 or more</p>
-                </div>
-                <p>
-                    You get an ergonomic stand made of natural bamboo. You've helped us launch<br/>
-                    our promotional campaign, and you’ll be added to a special Backer member list.
-                </p>
-                <div className="css-product-footer">
-                    <h2>101</h2>
-                    <button className="css-btn" onclick="selectReward(25)">Select reward</button>
-                </div>
-            </div>
-            <div className="css-product">
-                <div className="css-product-header">
-                    <h3>Black Edition Stand</h3>
-                    <p>Pledge $75 or more</p>
-                </div>
-                <p>
-                    You get a Black Special Edition computer stand and a personal thank you. You’ll<br/>
-                    be added to our Backer member list. Shipping is included.
-                </p>
-                <div className="css-product-footer">
-                    <h2>64</h2>
-                    <button className="css-btn" onclick="selectReward(75)">Select reward</button>
-                </div>
-            </div>
-            <div className="css-product css-product-disabled">
-                <div className="css-product-header">
-                    <h3>Mahogany Special Edition</h3>
-                    <p>Pledge $200 or more</p>
-                </div>
-                <p>
-                    You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal<br/>
-                    thank you. You’ll be added to our Backer member list.  Shipping is included.
-                </p>
-                <div className="css-product-footer">
-                    <h2>0</h2>
-                    <button className="css-btn" style={mystyle}>Out of stock</button>
-                </div>
-            </div>
+            {props.children}
         </div>
     );
 };
