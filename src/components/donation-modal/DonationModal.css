@@ -1,0 +1,130 @@
+.css-donation-modal {
+    position: fixed;
+    top: 10%;
+    left: 24%;
+    width: 740px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 50px;
+    /*visibility: hidden;*/
+    overflow-y: auto;
+}
+
+.css-modal-enabled {
+    background-color: #979797;
+    opacity: 0.9;
+
+}
+
+.css-producs-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.css-full-product-modal {
+    width: 650px;
+    height: 157px;
+    border-radius: 10px;
+}
+
+.css-top-part-product-modal {
+    width: 650px;
+    height: 157px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+}
+
+.css-top-part-product-modal .css-product-header-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-top-part-product-modal .css-product-header-modal span p {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19.57px;
+    color: #3CB3AB;
+}
+
+.css-top-part-product-modal input {
+    width: 10%;
+    height: 15%;
+    margin-top: 25px;
+}
+
+.css-donation-modal .css-close-modal-btn {
+    position: absolute;
+    right: 50px;
+    background-image: url(/src/images/icon-close-modal.svg);
+    width: 14.14px;
+    height: 14.14px;
+    border: none;
+    text-align: right;
+}
+.css-top-part-product-modal .css-product-header-modal span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 560px;
+    margin-bottom: -20px;
+}
+
+.css-top-part-product-modal .css-product-header-modal span h4 {
+    position: absolute;
+    right: 100px;
+}
+
+.css-top-part-product-modal .css-product-header-modal span h4::after {
+    content: 'left';
+    font-family: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #7A7A7A;
+    margin-left: 10px;
+}
+
+.css-bottom-part-product-modal {
+    width: 634px;
+    height: 97px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.css-preset-btn {
+    width: 100px;
+    height: 48px;
+    border: 2px solid gray;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.css-continue-btn {
+    border-radius: 25px;
+    width: 107px;
+    height: 48px;
+    border: none;
+    background-color: #3CB3AB;
+    color: white;
+    margin-left: 30px   ;
+}
+
+.css-bottom-part-product-modal {
+    width: 634px;
+    height: 97px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.css-bottom-part-product-modal input {
+    width: 320px;
+    border: none;
+}

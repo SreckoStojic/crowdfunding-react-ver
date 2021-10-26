@@ -1,11 +1,10 @@
 import './Header.css';
-import logo from '../../images/logo.svg';
 
 function Header() {
     return (
         <header>
             <nav>
-                <img class="css-logo-img" src={logo} />
+                <img className="css-logo-img" src={'/images/logo.svg'} />
                 <ul>
                     <li><a href="">About</a></li>
                     <li><a href="">Discover</a></li>
