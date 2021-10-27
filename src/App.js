@@ -13,22 +13,33 @@ let filterProductsByPrice = products.filter(p => p.price > 0);
 
 
 function App() {
-  let [modal, setModal] = useState(false);
-  function handleClick() {
-    setModal(!modal);
+  let [donationModal, setDonationModal] = useState(false);
+  let [totalDonationCount, setTotalDonationCount] = useState(89914);
+  let [totalBackersCount, setTotalBackersCount] = useState(5007);
+
+  function toggleDonationModal() {
+    setDonationModal(!donationModal);
+  }
+  
+  function calculateTotalDonationCount (donation) {
+    setTotalDonationCount(Number(totalDonationCount) + Number(donation));  
+  }
+
+  function calculateTotalBackersCount() {
+    setTotalBackersCount(totalBackersCount + 1);
   }
 
   return (
     <div className="css-main">
       <Header />
-      <Donate handleClick={handleClick} />
-      <DonationStats />
+      <Donate toggleDonationModal={toggleDonationModal} />
+      <DonationStats totalBackersCount={totalBackersCount} totalDonationCount={totalDonationCount} />
       <AboutProducts>
-        {filterProductsByPrice.map(p => <Product key={p.price} name={p.name} price={p.price} description={p.description} left={p.left} />)}
+        {filterProductsByPrice.map(p => <Product key={p.id} id={p.id} name={p.name} price={p.price} description={p.description} left={p.left} />)}
       </AboutProducts>
-      {modal && 
-      <DonationModal handleClick={handleClick}>
-        {products.map(p => <ProductModal key={p.price} name={p.name} price={p.price} description={p.description} left={p.left} />)}
+      {donationModal && 
+      <DonationModal toggleDonationModal={toggleDonationModal}>
+        {products.map(p => <ProductModal radioChecked={p.radioChecked} key={p.id} id={p.id} name={p.name} price={p.price} description={p.description} left={p.left} calculateTotalBackersCount={calculateTotalBackersCount} calculateTotalDonationCount={calculateTotalDonationCount} key={p.price} name={p.name} price={p.price} description={p.description} left={p.left} />)}
       </DonationModal> 
       }
     </div>

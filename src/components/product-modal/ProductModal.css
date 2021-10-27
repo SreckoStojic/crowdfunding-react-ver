@@ -102,3 +102,17 @@
     width: 320px;
     border: none;
 }
+
+
+.css-unavailable-product-radio {
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+.css-unavailable-product-div {
+    opacity: 0.4;
+}
+
+.css-product-0-price {
+    margin-left: 120px
+}

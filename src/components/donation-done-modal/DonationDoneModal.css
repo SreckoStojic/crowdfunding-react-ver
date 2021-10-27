@@ -1,0 +1,21 @@
+.css-donation-done-modal {
+    width: 540px;
+    height: 449px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    position: fixed;
+    left: 33%;
+    top: 27%;
+    z-index: 1;
+    gap: 20px;
+    background-color: whitesmoke;
+}
+
+.css-donation-done-modal button {
+    width: 107px;
+}

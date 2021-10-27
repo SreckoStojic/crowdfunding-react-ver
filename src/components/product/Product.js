@@ -12,7 +12,7 @@ function Product(props) {
             </p>
             <div className="css-product-footer">
                 <h2>{props.left}</h2>
-                <button className="css-btn" onclick="selectReward(25)">Select reward</button>
+                <button className="css-btn">Select reward</button>
             </div>
         </div>
     );
