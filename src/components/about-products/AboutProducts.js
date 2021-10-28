@@ -1,12 +1,5 @@
 import './AboutProducts.css';
 
-const mystyle = {
-    cursor: "not-allowed",
-    backgroundColor: "gray"
-};
-
-
-
 function AboutProducts(props) {
     return (
         <div className="css-about-products js-about-products">

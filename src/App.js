@@ -16,6 +16,10 @@ function App() {
   let [donationModal, setDonationModal] = useState(false);
   let [totalDonationCount, setTotalDonationCount] = useState(89914);
   let [totalBackersCount, setTotalBackersCount] = useState(5007);
+  let [option, setOption] = useState({
+    optionValue : 1,
+    isChecked : false
+  });
 
   function toggleDonationModal() {
     setDonationModal(!donationModal);
@@ -29,6 +33,13 @@ function App() {
     setTotalBackersCount(totalBackersCount + 1);
   }
 
+  function handleRadioChange(event) {
+      setOption({
+          optionValue : event.target.value,
+          isChecked : event.target.checked
+      });
+  }
+
   return (
     <div className="css-main">
       <Header />
@@ -39,7 +50,10 @@ function App() {
       </AboutProducts>
       {donationModal && 
       <DonationModal toggleDonationModal={toggleDonationModal}>
-        {products.map(p => <ProductModal radioChecked={p.radioChecked} key={p.id} id={p.id} name={p.name} price={p.price} description={p.description} left={p.left} calculateTotalBackersCount={calculateTotalBackersCount} calculateTotalDonationCount={calculateTotalDonationCount} key={p.price} name={p.name} price={p.price} description={p.description} left={p.left} />)}
+        <form>
+          {products.map(p => <ProductModal option={option} handleRadioChange={handleRadioChange} key={p.id} id={p.id} name={p.name} price={p.price} description={p.description} left={p.left} calculateTotalBackersCount={calculateTotalBackersCount} calculateTotalDonationCount={calculateTotalDonationCount} />)}
+        </form>
+        
       </DonationModal> 
       }
     </div>

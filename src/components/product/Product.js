@@ -12,7 +12,11 @@ function Product(props) {
             </p>
             <div className="css-product-footer">
                 <h2>{props.left}</h2>
-                <button className="css-btn">Select reward</button>
+                {
+                    (props.price === 200) ? <button className="css-btn css-product-disabled">Out of Stock</button>
+                         : <button className="css-btn">Select reward</button>
+                }
+                
             </div>
         </div>
     );
